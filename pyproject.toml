@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "dbscripts"
+version = "1.0.0"
+description = "This project demonstrates how to execute Databricks job runs with Python wheels. The scripts are created with Typer (based on click) and packaged as Python wheels. The wheels are installed in a Docker container and executed as Databricks job runs."
+authors = ["Johannes Schmidt <johannes.schmidt.vik@gmail.com>"]
+homepage = "https://github.com/johschmidt42/databricks-python-wheel-job-run"
+repository = "https://github.com/johschmidt42/databricks-python-wheel-job-run"
+license = "MIT"
+readme = "README.md"
+packages = [
+    {include = "dbscript1", from = "src"},
+    {include = "dbscript2", from = "src"},
+]
+
+[tool.poetry.scripts]
+dbscript1 = "dbscript1.script:main"
+dbscript2 = "dbscript2.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = {extras = ["all"], version = "^0.9.0"}
+
+[tool.poetry.group.dev.dependencies]
+httpx = "^0.24.1"
+pydantic = {extras = ["dotenv"], version = "^1.10.8"}
+
+
+[tool.poetry.group.lint.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
