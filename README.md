@@ -1,6 +1,6 @@
 # How to: Run Python Wheel Tasks in Custom Docker Containers in Databricks
 
-Based on the blog post [TODO: add link] by Johannes Schmidt.
+Based on the blog post: [Running Python Wheel Tasks in Custom Docker Containers in Databricks](https://medium.com/towards-data-science/running-python-wheel-tasks-in-custom-docker-containers-in-databricks-de3ff20f5c79) by Johannes Schmidt.
 
 ## Prerequisites
 
