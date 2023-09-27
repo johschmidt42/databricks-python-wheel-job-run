@@ -48,6 +48,8 @@ make docker-push
 The Python version used is **3.9** because it is the version supported by the latest LTS version of the Databricks
 Runtime 12.2 LTS (May, 2023).
 
+**Update: 13.3 LTS is now available (September, 2023)**
+
 ## Docker images
 
 The Databricks base images can be found
